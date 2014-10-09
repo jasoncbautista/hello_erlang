@@ -1,0 +1,3 @@
+{release,{"hello_erlang_release","1"},
+         {erts,"5.10.4"},
+         [{kernel,"2.16.4"},{stdlib,"1.19.4"},{hello_erlang,"0.1.0"}]}. 
