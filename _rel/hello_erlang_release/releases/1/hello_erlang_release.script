@@ -1,4 +1,4 @@
-%% script generated at {2014,10,8} {21,51,40}
+%% script generated at {2014,10,8} {22,0,26}
 {script,
     {"hello_erlang_release","1"},
     [{preLoaded,

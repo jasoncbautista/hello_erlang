@@ -20,3 +20,11 @@ make
 
 
 ```
+
+
+
+Make a cowboy http handler:
+
+```
+    make new t=cowboy_http n=hello_handler
+```
