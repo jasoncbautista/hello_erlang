@@ -5,7 +5,8 @@
 	{registered, []},
 	{applications, [
 		kernel,
-		stdlib
+		stdlib,
+        cowboy
 	]},
 	{mod, {hello_erlang_app, []}},
 	{env, []}
