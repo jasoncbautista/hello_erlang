@@ -13,6 +13,6 @@ echo(<<"GET">>, Echo , Req) ->
     cowboy_req:reply(200, [ 
 
                        {<<"content-type">>, <<"text/plain; charset=utf-8">>}
-                      ], Echo, Req);
+                      ], Echo, Req).
 
 % TODO: create store for player location lat / long  MAP prototype

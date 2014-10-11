@@ -1,26 +1,18 @@
 -module(hello_handler).
--behaviour(cowboy_http_handler).
+% -behaviour(cowboy_http_handler).
 
--export([init/3]).
--export([handle/2]).
--export([terminate/3]).
+-export([init/2]).
 
--record(state, {
-}).
+init(Req, Opts) ->
+    Method = cowboy_req:method(Req),
+    #{echo := Echo } = cowboy_req:match_qs([echo], Req),
+    Req2 = echo(Method, Echo, Req),
+	{ok, Req2, Opts}.
 
-init(_, Req, _Opts) ->
-	{ok, Req, #state{}}.
+echo(<<"GET">>, Echo , Req) ->
+    cowboy_req:reply(200, [ 
 
-handle(Req, State=#state{}) ->
-	{ok, Req2} = cowboy_req:reply(200, 
-                                  [{<<"content-type">>, <<"text/plain">> }],
-                                  <<"Hello Erlang!">>,
-                                  Req),
-	{ok, Req2, State}.
-
-terminate(_Reason, _Req, _State) ->
-	ok.
-
-
+                       {<<"content-type">>, <<"text/plain; charset=utf-8">>}
+                      ], Echo, Req).
 
 % TODO: create store for player location lat / long  MAP prototype
