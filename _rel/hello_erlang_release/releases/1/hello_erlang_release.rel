@@ -1,9 +1,9 @@
 {release,{"hello_erlang_release","1"},
-         {erts,"5.10.4"},
-         [{kernel,"2.16.4"},
-          {stdlib,"1.19.4"},
+         {erts,"6.2"},
+         [{kernel,"3.0.3"},
+          {stdlib,"2.2"},
           {ranch,"1.0.0"},
-          {crypto,"3.2"},
+          {crypto,"3.4.1"},
           {cowlib,"1.0.0"},
           {cowboy,"1.0.0"},
           {hello_erlang,"0.1.0"}]}. 
