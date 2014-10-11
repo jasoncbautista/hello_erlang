@@ -20,3 +20,7 @@ handle(Req, State=#state{}) ->
 
 terminate(_Reason, _Req, _State) ->
 	ok.
+
+
+
+% TODO: create store for player location lat / long  MAP prototype
